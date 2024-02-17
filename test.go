@@ -29,25 +29,12 @@ func main() {
 
 	scanner.Scan()
 	name := scanner.Text()
-	var reshenie = do_everything(name)
+	var reshenie = do_everything(name, dict)
 
 	fmt.Println(name, "=", reshenie)
 }
 
-func do_everything(str string) string {
-	dict := make(map[string]int)
-
-	dict["I"] = 1
-	dict["II"] = 2
-	dict["III"] = 3
-	dict["IV"] = 4
-	dict["V"] = 5
-	dict["VI"] = 6
-	dict["VII"] = 7
-	dict["VIII"] = 8
-	dict["IX"] = 9
-	dict["X"] = 10
-
+func do_everything(str string, dict map[string]int) string {
 	var resh int
 
 	plus := strings.Split(str, "+")
